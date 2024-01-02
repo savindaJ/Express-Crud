@@ -1,0 +1,11 @@
+{
+  "name": "express-crud",
+  "version": "1.0.0",
+  "description": "learn to express js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "savindaJ",
+  "license": "ISC"
+}
