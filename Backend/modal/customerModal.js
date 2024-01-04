@@ -7,14 +7,14 @@ function insert(req, res) {
 
     console.log(id,name,address,salary);
 
-   /* const insertQuery = "INSERT INTO customer (customerId, Name, address, salary) VALUES (?, ?, ?, ?)";
+    const insertQuery = "INSERT INTO customer (customerId, Name, address, salary) VALUES (?, ?, ?, ?)";
     const values = [id,name,address,parseFloat(salary)];
 
     connection.query(insertQuery, values, function (err, result) {
         if (err) res.json(err.code);
         console.log("Number of records inserted: " + result.affectedRows);
         res.json({massage:'ok'});
-    });*/
+    });
 }
 
 function update(req,res){
