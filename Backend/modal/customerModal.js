@@ -12,7 +12,9 @@ function getAll(req,res) {
 
     connection.query(insertQuery, function (err, result) {
         if (err) res.json(err.code);
-        res.json(result);
+        res.json({
+            data:result
+        });
     });
 }
 
