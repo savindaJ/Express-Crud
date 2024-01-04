@@ -103,15 +103,14 @@ $('#btnSaveCustomer').on('click', function () {
             salary: $('#customer-salary').val()
         },
         success: function (res) {
-            /*loadAllCustomers();
-            // alert(res.message);
+            loadAllCustomers();
             Swal.fire({
                 position: "top-end",
                 icon: "success",
                 title: res.message,
                 showConfirmButton: false,
                 timer: 1500
-            });*/
+            });
         },
         error: function (err) {
             let parse = JSON.parse(err.responseText);

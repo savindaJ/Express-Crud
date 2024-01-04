@@ -13,7 +13,7 @@ function insert(req, res) {
     connection.query(insertQuery, values, function (err, result) {
         if (err) res.json(err.code);
         console.log("Number of records inserted: " + result.affectedRows);
-        res.json({massage:'ok'});
+        res.json({message:'Customer Successfully inserted !'});
     });
 }
 
