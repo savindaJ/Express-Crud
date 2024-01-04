@@ -18,6 +18,20 @@ function insert(req, res) {
 }
 
 function update(req,res){
+    const id = req.body.id;
+    const name = req.body.name;
+    const address = req.body.address;
+    const salary = req.body.salary;
+
+    console.log(salary)
+
+    /*const updateQuery = "UPDATE customer SET Name=? ,address=?, salary=? WHERE customerId=?";
+    const values = [name,address,parseFloat(salary),id];
+    connection.query(updateQuery, values, function (err, result) {
+        if (err) res.json(err.code);
+        console.log("Number of records updated !: " + result.affectedRows);
+        res.json({message:'Customer Successfully Updated !'});
+    });*/
 
 }
 

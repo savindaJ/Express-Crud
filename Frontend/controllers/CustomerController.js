@@ -119,20 +119,16 @@ $('#btnSaveCustomer').on('click', function () {
     });
 });
 $('#btnUpdate').on('click', function () {
-
-    const customer = {
-        id: $(`#upCID`).val(),
-        name: $(`#upCName`).val(),
-        address: $(`#upCAddress`).val(),
-        salary: $(`#upCTp`).val()
-    }
-
-
     $.ajax({
-        url: baseUrl + "customer",
+        url: baseUrl + "put",
         type: "put",
         dataType: "json",
-        data: JSON.stringify(customer),
+        data: {
+            id: $(`#upCID`).val(),
+            name: $(`#upCName`).val(),
+            address: $(`#upCAddress`).val(),
+            salary: $(`#upCTp`).val()
+        },
         success: function (res) {
             // alert(res.message)
             Swal.fire({
