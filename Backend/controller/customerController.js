@@ -4,4 +4,11 @@ const getAll = (req,res)=>{
     });
 }
 
+const addCustomer = (req,res)=>{
+    res.json({
+        status:"post"
+    });
+}
+
 exports.getAll = getAll;
+exports.addCustomer = addCustomer;

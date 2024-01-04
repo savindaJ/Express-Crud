@@ -17,4 +17,8 @@ app.get('/get', (req, res) => {
     controller.getAll(req,res);
 });
 
+app.post('/post',(req,res)=>{
+    controller.addCustomer(req,res);
+})
+
 module.exports = app;
