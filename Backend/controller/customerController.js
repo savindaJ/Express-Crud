@@ -10,5 +10,19 @@ const addCustomer = (req,res)=>{
     });
 }
 
+const updateCustomer = (req,res)=>{
+    res.json({
+        status:"put"
+    });
+}
+
+const deleteCustomer = (req,res)=>{
+    res.json({
+        status:"delete"
+    });
+}
+
 exports.getAll = getAll;
 exports.addCustomer = addCustomer;
+exports.updateCustomer = updateCustomer;
+exports.deleteCustomer = deleteCustomer;
