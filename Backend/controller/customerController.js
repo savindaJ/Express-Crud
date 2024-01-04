@@ -1,25 +1,18 @@
+const modal = require('../modal/customerModal')
 const getAll = (req,res)=>{
-    res.json({
-        status:"ok"
-    });
+    modal.getAll(req,res);
 }
 
 const addCustomer = (req,res)=>{
-    res.json({
-        status:"post"
-    });
+   modal.insert(req,res);
 }
 
 const updateCustomer = (req,res)=>{
-    res.json({
-        status:"put"
-    });
+  modal.update(req,res);
 }
 
 const deleteCustomer = (req,res)=>{
-    res.json({
-        status:"delete"
-    });
+   modal.deleteCustomer(req,res);
 }
 
 exports.getAll = getAll;
