@@ -50,7 +50,7 @@ function deleteCustomer(req, res) {
     connection.query(quarry, req.body.id, (err) => {
         if (err) res.json(err)
         res.json({
-            message:"Customer Successfully Deleted !"
+            message: "Customer Successfully Deleted !"
         })
     });
 

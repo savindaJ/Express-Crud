@@ -23,8 +23,8 @@ function bindEvent() {
                     url: baseUrl + "delete",
                     type: "put",
                     dataType: "json",
-                    data:{
-                        id:$tds.text()
+                    data: {
+                        id: $tds.text()
                     },
                     success: function (res) {
                         loadAllCustomers();
