@@ -1,7 +1,6 @@
+const connection = require('../db/connection');
 function insert(req, res) {
-    res.json({
-        status:"OK"
-    })
+
 }
 
 function update(req,res){
@@ -9,7 +8,12 @@ function update(req,res){
 }
 
 function getAll(req,res) {
+    const insertQuery = "SELECT * FROM customer";
 
+    connection.query(insertQuery, function (err, result) {
+        if (err) res.json(err.code);
+        res.json(result);
+    });
 }
 
 function deleteCustomer(req,res){
