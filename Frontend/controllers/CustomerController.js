@@ -93,7 +93,7 @@ function loadAllCustomers() {
 
 $('#btnSaveCustomer').on('click', function () {
     $.ajax({
-        url: baseUrl + "customer",
+        url: baseUrl + "post",
         type: "post",
         dataType: "json",
         data: {
@@ -103,7 +103,7 @@ $('#btnSaveCustomer').on('click', function () {
             salary: $('#customer-salary').val()
         },
         success: function (res) {
-            loadAllCustomers();
+            /*loadAllCustomers();
             // alert(res.message);
             Swal.fire({
                 position: "top-end",
@@ -111,7 +111,7 @@ $('#btnSaveCustomer').on('click', function () {
                 title: res.message,
                 showConfirmButton: false,
                 timer: 1500
-            });
+            });*/
         },
         error: function (err) {
             let parse = JSON.parse(err.responseText);

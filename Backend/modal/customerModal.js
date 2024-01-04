@@ -1,6 +1,20 @@
 const connection = require('../db/connection');
 function insert(req, res) {
+    const id = req.body.id;
+    const name = req.body.name;
+    const address = req.body.address;
+    const salary = req.body.salary;
 
+    console.log(id,name,address,salary);
+
+   /* const insertQuery = "INSERT INTO customer (customerId, Name, address, salary) VALUES (?, ?, ?, ?)";
+    const values = [id,name,address,parseFloat(salary)];
+
+    connection.query(insertQuery, values, function (err, result) {
+        if (err) res.json(err.code);
+        console.log("Number of records inserted: " + result.affectedRows);
+        res.json({massage:'ok'});
+    });*/
 }
 
 function update(req,res){
