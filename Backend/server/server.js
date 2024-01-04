@@ -2,8 +2,8 @@ const app = require('../app');
 const router = require('../router/router');
 const con = require('../db/connection')
 
-const server = app.listen(3001,'127.0.0.1',()=>{
+const server = app.listen(3001, '127.0.0.1', () => {
     console.log("server Started !")
 });
 
-app.use('/api',router)
+app.use('/api', router)

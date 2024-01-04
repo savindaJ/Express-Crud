@@ -14,19 +14,19 @@ app.use(
 app.use(express.json());
 
 app.get('/get', (req, res) => {
-    controller.getAll(req,res);
+    controller.getAll(req, res);
 });
 
-app.post('/post',(req,res)=>{
-    controller.addCustomer(req,res);
+app.post('/post', (req, res) => {
+    controller.addCustomer(req, res);
 })
 
-app.put('/update',(req,res)=>{
-    controller.updateCustomer(req,res);
+app.put('/update', (req, res) => {
+    controller.updateCustomer(req, res);
 })
 
-app.put('/delete',(req,res)=>{
-    controller.deleteCustomer(req,res);
+app.put('/delete', (req, res) => {
+    controller.deleteCustomer(req, res);
 })
 
 module.exports = app;
