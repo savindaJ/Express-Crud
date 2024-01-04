@@ -20,9 +20,12 @@ function bindEvent() {
         }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                    url: baseUrl + "customer?id=" + $tds.text(),
-                    type: "delete",
+                    url: baseUrl + "delete",
+                    type: "put",
                     dataType: "json",
+                    data:{
+                        id:$tds.text()
+                    },
                     success: function (res) {
                         loadAllCustomers();
                         Swal.fire({
